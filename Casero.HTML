@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pestañas de Información</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #001f3f; /* Azul navy */
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .tab {
+      overflow: hidden;
+      border-bottom: 1px solid #ccc;
+      background-color: #003366;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      color: white;
+    }
+
+    .tab button:hover {
+      background-color: #005599;
+    }
+
+    .tab button.active {
+      background-color: #0074D9;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-top: none;
+      background-color: #002244;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      background-color: white;
+    }
+
+    .link-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #39CCCC;
+      color: #001f3f;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .link-button:hover {
+      background-color: #7FDBFF;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Página de Información con Pestañas</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Resumen')">Cultura Digital - Resumen</button>
+  <button class="tablinks" onclick="openTab(event, 'Infografia')">Infografía de ChatGPT</button>
+  <button class="tablinks" onclick="openTab(event, 'Libro')">Cultura Digital - Libro</button>
+  <button class="tablinks" onclick="openTab(event, 'Logotipo')">Logotipo de tu Empresa</button>
+  <button class="tablinks" onclick="openTab(event, 'Teclas')">Teclas de Combinación</button>
+  <button class="tablinks" onclick="openTab(event, 'TikTok')">Video TikTok</button>
+</div>
+
+<div id="Resumen" class="tabcontent">
+  <h3>Cultura Digital - Resumen</h3>
+  <iframe src="https://josebrayanortegaguel-19.blogspot.com/2025/02/cultura-digital-pdf-resumen.html"></iframe>
+</div>
+
+<div id="Infografia" class="tabcontent">
+  <h3>Infografía de ChatGPT</h3>
+  <iframe src="https://josebrayanortegaguel-19.blogspot.com/2025/03/infografia-de-chat-gpt.html"></iframe>
+</div>
+
+<div id="Libro" class="tabcontent">
+  <h3>Cultura Digital - Libro</h3>
+  <iframe src="https://josebrayanortegaguel-19.blogspot.com/2025/03/cultura-digital-libro.html"></iframe>
+</div>
+
+<div id="Logotipo" class="tabcontent">
+  <h3>Logotipo de tu Empresa</h3>
+  <iframe src="https://josebrayanortegaguel-19.blogspot.com/2025/03/logotipo-de-tu-empresa.html"></iframe>
+</div>
+
+<div id="Teclas" class="tabcontent">
+  <h3>Teclas de Combinación</h3>
+  <iframe src="https://josebrayanortegaguel-19.blogspot.com/2025/03/teclas-de-combinacion.html"></iframe>
+</div>
+
+<div id="TikTok" class="tabcontent">
+  <h3>Video TikTok</h3>
+  <p>Haz clic en el botón para ver el video en TikTok:</p>
+  <a class="link-button" href="https://vt.tiktok.com/ZShBynsF6/" target="_blank">Ver Video en TikTok</a>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Abre la primera pestaña automáticamente
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".tablinks").click();
+});
+</script>
+
+</body>
+</html>
